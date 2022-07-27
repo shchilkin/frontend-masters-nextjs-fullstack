@@ -15,7 +15,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const token = jwt.sign(
       { id: user.id, email: user.email, time: Date.now() },
       "hello",
-      { expires: "8h" }
+      { expiresIn: "8h" }
     );
     res.setHeader(
       "Set-Cookie",
