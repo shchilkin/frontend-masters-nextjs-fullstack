@@ -18,6 +18,8 @@ model User {
   email     String     @unique
   password  String
   playlists Playlist[]
+  firstName String
+  lastName  String
 }
 
 model Song {

@@ -1,14 +1,17 @@
 import { Box, Flex, Text, Image } from "@chakra-ui/react";
 import GradientLayout from "../components/GradientLayout";
 import prisma from "../lib/prisma";
+import { useMe } from "../lib/hooks";
 
 const Home = ({ artists }) => {
+  const { user } = useMe();
+
   return (
     <GradientLayout
       color="green"
       subtitle="profile"
-      title="Aleksandr Shchilkin"
-      description="person"
+      title={`${user?.firstName} ${user?.lastName}`}
+      description={`${user.playlistCount} public playlists`}
       image="https://cdn.dribbble.com/users/5138895/avatars/normal/451a1e7c8e255dcddab3228559055b2b.png?1603969526"
       roundImage
     >

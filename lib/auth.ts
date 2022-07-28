@@ -14,9 +14,6 @@ export const validateRoute = (handler) => {
         user = await prisma.user.findUnique({
           where: { id },
         });
-
-        console.log(user);
-
         if (!user) {
           throw new Error("Not real user");
         }
@@ -34,3 +31,5 @@ export const validateRoute = (handler) => {
     res.json({ error: "Not Authorizied | No token" });
   };
 };
+
+export const validateToken = (token) => jwt.verify(token, "hello");
