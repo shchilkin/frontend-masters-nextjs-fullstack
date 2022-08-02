@@ -1,4 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a course work created during [Fullstack Next.js App](https://frontendmasters.com/courses/fullstack-app-next/) by Scott Moss on Frontend Masters.
+
+## App Credentials
+username: **user@test.com**  
+password: **password**
+
 
 ## Getting Started
 
